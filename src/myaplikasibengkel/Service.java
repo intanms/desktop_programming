@@ -7,6 +7,7 @@ package myaplikasibengkel;
 
 import com.mysql.jdbc.Connection;
 import java.awt.event.KeyEvent;
+import java.io.InputStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,7 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import static mysqlapp.Koneksi.conn;
+import static myaplikasibengkel.Koneksi.conn;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -77,9 +78,9 @@ public class Service extends javax.swing.JDialog {
         setTitle("Servis");
         setLocation(new java.awt.Point(500, 0));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mysqlapp/gambar/icon.png"))); // NOI18N
-        jLabel1.setText("BENGKEL COY");
         jLabel1.setFont(new java.awt.Font("TeX Gyre Schola Math", 1, 48)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/myaplikasibengkel/gambar/icon.png"))); // NOI18N
+        jLabel1.setText("BENGKEL COY");
 
         jLabel2.setText("No. Services");
 
@@ -135,8 +136,8 @@ public class Service extends javax.swing.JDialog {
 
         lblHarga.setText("0");
 
-        lbNoServis.setText("000000");
         lbNoServis.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbNoServis.setText("000000");
 
         btnGrup.add(rb0);
         rb0.setText("0%");
@@ -184,7 +185,7 @@ public class Service extends javax.swing.JDialog {
                                 .addComponent(jLabel2)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(34, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)))
                 .addGap(31, 31, 31))
         );
@@ -556,7 +557,8 @@ public class Service extends javax.swing.JDialog {
         parameters.put("TX_ID", txid);
      //   parameters.put("JUMLAH", total);
         try{
-            JasperPrint jp = JasperFillManager.fillReport(getClass().getResourceAsStream("../report/strukservices.jasper"), parameters, conn);
+            InputStream file = getClass().getResourceAsStream("/report/strukservices.jasper");
+            JasperPrint jp = JasperFillManager.fillReport(file, parameters, conn);
             JasperViewer.viewReport(jp, false);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
