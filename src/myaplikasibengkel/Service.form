@@ -81,7 +81,7 @@
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -138,7 +138,7 @@
           <Font name="TeX Gyre Schola Math" size="48" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/mysqlapp/gambar/icon.png"/>
+          <Image iconType="3" name="/myaplikasibengkel/gambar/icon.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="BENGKEL COY"/>
       </Properties>
