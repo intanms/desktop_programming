@@ -139,9 +139,7 @@ Aplikasi bengkel ini merupakan sebuah aplikasi sederhana yang merupakan sebuah d
 
 ## 6. Instalasi
 
-### Installation Requirements
-
-- Windows 
+#### Windows 
 
     1. Pastikan windows sudah memiliki XAMPP, apabila belum maka dapat menginstalnya terlebih dahulu.
 
@@ -167,7 +165,7 @@ Aplikasi bengkel ini merupakan sebuah aplikasi sederhana yang merupakan sebuah d
 
     Selanjutnya menjalankan hasil instalansi sesuai dengan nama folder yang dibuat sebelumnya.
 
-- Linux 
+#### Linux 
 
     1. Buka file yang berisi installer aplikasi, setelah itu buka terminal untuk melakukan proses instalansi dan jalankan perintah:
 
