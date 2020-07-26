@@ -135,7 +135,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cari:"/>
+        <Property name="text" type="java.lang.String" value="Cari: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCari">
