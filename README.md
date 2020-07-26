@@ -121,23 +121,25 @@ Aplikasi bengkel ini merupakan sebuah aplikasi sederhana yang merupakan sebuah d
 3. Penggunaan prepared statement untuk mencegah SQL Injection.
 4. Penerapan sanitasi input agar aplikasi tidak menampilkan data yang tidak sesuai.
 
+## 5. Library yang Digunakan dalam pembuatan aplikasi
 
-## 5. Instalasi
+1. Java 8
+2. MySQL JDBC Driver
+3. LGoodDatePicker-10.4.1
+4. xchart-3.6.3
+5. jcalendar-1.4
+6. jdatepicker-1.3.4
+7. jasperreports-6.3.0
+8. groovy-2.4.15
+9. commons-logging-1.2
+10. commons-digester-2.1
+11. commons-collections-3.2.1
+12. commons-beanutils-1.8.0
 
-### Installation Requirements dan Library yang Dibutuhkan
 
-    1. Java 8
-    2. MySQL JDBC Driver
-    3. LGoodDatePicker-10.4.1
-    4. xchart-3.6.3
-    5. jcalendar-1.4
-    6. jdatepicker-1.3.4
-    7. jasperreports-6.3.0
-    8. groovy-2.4.15
-    9. commons-logging-1.2
-    10. commons-digester-2.1
-    11. commons-collections-3.2.1
-    12. commons-beanutils-1.8.0
+## 6. Instalasi
+
+### Installation Requirements
 
 - Windows 
 
