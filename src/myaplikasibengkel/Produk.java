@@ -242,7 +242,7 @@ public class Produk extends javax.swing.JFrame {
             loadTabelProduk(teks);
         } else{
              if( l == 9){
-                 JOptionPane.showMessageDialog(this, "Nama Produk tidak valid");
+                 JOptionPane.showMessageDialog(this, "Nama Produk Tidak Valid");
                     }else
              {
                     JOptionPane.showMessageDialog(this, "Nama Produk terdiri dari angka dan huruf");
