@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="161" pageHeight="425" whenNoDataType="NoDataSection" columnWidth="121" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="979a6a0b-02a3-4dd6-9040-1f9a18379f2f">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="TX_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT id_txtemp2, no_services, nm_services, id_service, harga, jml_item, discount, jml_bayar FROM isi_temp]]>
+	</queryString>
+	<field name="id_txtemp2" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_services" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_services" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_service" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_item" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="discount" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="121" height="20" uuid="4268d80e-2762-4a07-8922-23d321601524"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="13"/>
+				</textElement>
+				<text><![CDATA[Bengkel cuy]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="121" height="35" uuid="21b6a329-0c2d-4645-b73d-3e3ccc2fefd2"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Ruko  Mawar Blok  69 Jl. Kusuma Dipraja, purwojaya (0233) 555 4434]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="436c7835-f6fe-4d0d-988e-630395f97df7"/>
+				<textFieldExpression><![CDATA["TxID#"+$P{TX_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="56" height="20" uuid="af6fdea1-5755-46bd-8890-010601d82585"/>
+				<text><![CDATA[No Service]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="20" width="65" height="20" uuid="a9c09561-e44b-4df2-92cd-bb028821ff48"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{no_services}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="56" y="20" width="65" height="20" uuid="206b6c28-6702-4247-b3e4-06a3f464fe3b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["RP." + $F{harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="56" height="20" uuid="f5121c89-22e5-452b-a42d-8dbe5cfbb86a"/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="40" width="65" height="20" uuid="434e5f78-90fa-4972-bc96-8bcb41437413"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{jml_item} + " item"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="56" height="20" uuid="2b8b9da0-8aff-471e-ae05-7ac708bf1532"/>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="56" y="60" width="65" height="20" uuid="340dd5c0-4c94-4ec9-a016-87774184896e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{discount} + "%"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="6d579f5a-5a10-4613-afe7-c620c9dfdcb1"/>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="56" height="20" uuid="0ab56535-5727-4c40-8771-00408dfb8263"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="0" width="65" height="20" uuid="e28d86fc-e4b8-48e9-bf9f-9a2c7b8bd551"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{id_service}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="56" y="0" width="65" height="20" uuid="620d06fb-0fbc-4a38-9c41-5ca445445c42"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["RP." + $F{jml_bayar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d352fd79-96f9-4a30-8e4e-382d633e0177"/>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="121" height="20" uuid="659b5bcf-5fa3-4664-b6cd-78fc9163cd64"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tencu]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
